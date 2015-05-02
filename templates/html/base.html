@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+                London Python Project Nights {% block title %} {% endblock %}
+        </title>
+        <!--
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <span>
+                            <img src="Logo.png" alt="Logo">
+                        </span>
+                        <span>London Python Project Nights </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="starter-template">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
