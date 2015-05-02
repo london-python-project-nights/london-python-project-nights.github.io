@@ -1,4 +1,5 @@
 body {
+  padding-top: 50px;
   background: #3776ab;
   font-family: Helvetica, Arial, sans-serif;
 
@@ -17,42 +18,21 @@ body {
   box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
 }
 
-#heading {
-  .offset;
-  position: fixed;
-  .with-shadow;
-  display: block;
-  box-sizing: border-box;
-  padding: 9px 4%;
-  top: 0;
-  z-index: 22;
-  left: -2%;
-  width: 104%;
-  background: #004C8C;
-  color: white;
-  align-content: flex-start;
-
-  > * {
-    float: left;
-    line-height: 60px;
-    display: inline-block;
-    margin: 0 6px;
-    padding: 6px;
-  }
+.card {
+  background-color: white;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 24px;
+  .with-shadow
 }
 
-#content {
-  position: fixed;
-  top: 100px;
-  
-  > div {
-    padding: 16px;
-    background: lightsteelblue;
+.starter-template {
+  & > p {
+    .card
+  }
 
-    > * {
-      margin: 8px;
-    }
+  & > h3 {
+    margin: 0;
+    padding: 0;
   }
 }
-
-#footer {}
