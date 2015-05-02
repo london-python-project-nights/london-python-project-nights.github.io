@@ -17,3 +17,4 @@ def write(template_path, output_path):
 write('html/home.html', 'index.html')
 write('html/coc.html', 'code-of-conduct.html')
 write('html/forum.html', 'mail.html')
+write('html/twitter_embed.html', 'tweets.html')

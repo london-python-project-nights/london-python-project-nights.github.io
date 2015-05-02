@@ -1,0 +1,48 @@
+{% extends "html/base.html" %}
+
+{% block title %} - Tweets {% endblock %}
+{% block style %}
+{% endblock %}
+
+{% block content %}
+    <div class="card">
+        <div class="content">
+            <a class="twitter-timeline"
+               href="https://twitter.com/ldnpyprj"
+               data-widget-id="594563446294863872">
+                Tweets by @ldnpyprj
+            </a>
+            <script>
+                !function(d,s,id){
+                    var js;
+                    var fjs = d.getElementsByTagName(s)[0];
+                    var p = /^http:/.test(d.location) ? 'http' : 'https';
+
+                    if(!d.getElementById(id)){
+                        js=d.createElement(s);
+                        js.id=id;
+                        js.src=p+"://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js,fjs);
+                    }
+                }(document,"script","twitter-wjs");
+
+                function resizeTwitter(){
+                    var rendered = document.getElementsByClassName(
+                            'twitter-timeline-rendered');
+
+                    if (rendered.length > 0){
+                        for(var i=0; i < rendered.length; i++){
+                            var el = rendered[i];
+                            el.style.width = "100%";
+                            el.style.height = "80%";
+                        }
+                    } else {
+                        setTimeout(resizeTwitter, 1000);
+                    }
+                }
+
+                setTimeout(resizeTwitter, 1000);
+            </script>
+        </div>
+    </div>
+{% endblock %}

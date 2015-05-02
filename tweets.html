@@ -1,11 +1,12 @@
 <html>
     <head>
         <title>
-                London Python Project Nights  - Mail 
+                London Python Project Nights  - Tweets 
         </title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
+
     </head>
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -44,9 +45,42 @@
                 
     <div class="card">
         <div class="content">
-            <iframe id="forum_embed"
-                    src="https://groups.google.com/forum/embed/?place=forum/london-python-project-nights#!forum/london-python-project-nights"
-                    scrolling="no" width="100%" height="80%"></iframe>
+            <a class="twitter-timeline"
+               href="https://twitter.com/ldnpyprj"
+               data-widget-id="594563446294863872">
+                Tweets by @ldnpyprj
+            </a>
+            <script>
+                !function(d,s,id){
+                    var js;
+                    var fjs = d.getElementsByTagName(s)[0];
+                    var p = /^http:/.test(d.location) ? 'http' : 'https';
+
+                    if(!d.getElementById(id)){
+                        js=d.createElement(s);
+                        js.id=id;
+                        js.src=p+"://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js,fjs);
+                    }
+                }(document,"script","twitter-wjs");
+
+                function resizeTwitter(){
+                    var rendered = document.getElementsByClassName(
+                            'twitter-timeline-rendered');
+
+                    if (rendered.length > 0){
+                        for(var i=0; i < rendered.length; i++){
+                            var el = rendered[i];
+                            el.style.width = "100%";
+                            el.style.height = "80%";
+                        }
+                    } else {
+                        setTimeout(resizeTwitter, 1000);
+                    }
+                }
+
+                setTimeout(resizeTwitter, 1000);
+            </script>
         </div>
     </div>
 
