@@ -5,9 +5,15 @@
         </title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="suggestions-welcome.css">
         <link rel="stylesheet" type="text/css" href="style.css">{% block style %}{% endblock %}
     </head>
     <body>
+        {% block suggestions %}<span id="suggestions-welcome">
+            <a href="https://github.com/london-python-project-nights/london-python-project-nights.github.io">
+                Suggestions welcome!
+            </a>
+        </span>{% endblock %}
         <nav class="navbar navbar-inverse navbar-fixed-top">
             {% include "html/nav.html" %}
         </nav>
