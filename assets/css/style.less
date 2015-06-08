@@ -1,0 +1,69 @@
+@import (css) "../../templates/css/bootstrap.css";
+@import (css) "../../templates/css/bootstrap-theme.css";
+
+body {
+  padding-top: 50px;
+  background: url('/assets/png/dark_embroidery.png') #3776ab;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+nav {
+
+  max-height: 50px;
+
+  img {
+    height: 100%;
+  }
+}
+
+.offset {
+  position: relative;
+  top: -15px;
+  left: 6px;
+}
+
+.with-shadow {
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+}
+
+.card {
+  .heading {
+    margin-top: 24px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-left: 8px;
+  }
+  .content {
+    background: url("/assets/png/subtle_white_mini_waves.png") white;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 24px;
+    .with-shadow
+
+  }
+}
+
+.img-small {
+  width: 160px;
+  .with-shadow;
+
+  &:hover{
+    width: 100%;
+  }
+
+  transition-delay: 0.4s;
+  transition-duration: 0.4s;
+  transition-property: width, height;
+  transition-timing-function: cubic-bezier(.5, 0, .5, 1.4);
+
+  div > a > & {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.vga {
+  width: 640px;
+  height: 480px;
+}

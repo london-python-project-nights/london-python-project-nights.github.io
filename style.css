@@ -1,9 +1,0 @@
-@import "templates/css/bootstrap.css";
-@import "templates/css/bootstrap-theme.css";
-body{padding-top:50px;background:#3776ab;font-family:Helvetica,Arial,sans-serif}
-nav{max-height:50px}nav img{height:100%}
-.offset{position:relative;top:-15px;left:6px}
-.with-shadow{box-shadow:0 0 4px rgba(0,0,0,0.14),0 4px 8px rgba(0,0,0,0.28)}
-.card .heading{margin-top:24px;margin-bottom:0;padding-bottom:0;padding-left:8px}
-.card .content{background-color:#fff;padding:8px;margin-top:4px;margin-bottom:24px;box-shadow:0 0 4px rgba(0,0,0,0.14),0 4px 8px rgba(0,0,0,0.28)}
-.vga{width:640px;height:480px}

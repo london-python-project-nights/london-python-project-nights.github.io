@@ -1,0 +1,38 @@
+{% extends "html/base.html" %}
+
+{%- macro event_link(event) -%}
+    <a href="/events/s{{ event.season }}e{{ event.episode }}">
+        Season {{ event.season }} Episode {{ event.episode }}
+    </a>
+{%- endmacro -%}
+
+{% block content %}
+    <div class="card">
+        <h1 class="heading"> Upcoming events </h1>
+        <div class="content">
+            <p>
+                The next event will be
+                <a href="https://london-python-project-nights.eventwax.com/london-python-project-nights-s00-e01">
+                    Season 00 Episode 01</a>, and will be hosted at Skimlinks
+                . on Thursday 18th of June 2015 from 18:30 to 22:00.
+            </p>
+
+        <iframe width="100%" style="min-height: 240px; border: none; height:
+        auto"
+                src="https://london-python-project-nights.eventwax.com/event/113681/tickets/widget"></iframe>
+
+    </div>
+
+    <div class="card">
+        <h1 class="heading"> Past Events </h1>
+        <div class="content">
+            Find out more about London Python Project Nights be reading about
+            what's gone on at past events:
+            <ul>
+            {% for event in events %}
+                <li>{{ event_link(event) }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

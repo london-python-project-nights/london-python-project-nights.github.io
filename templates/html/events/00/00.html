@@ -1,0 +1,101 @@
+{% extends "html/base.html" %}
+
+{%- macro gallery_image(img_url, description) -%}
+    <a href="/assets/jpg/S00E00/{{ img_url }}.jpg">
+        <img src="/assets/jpg/S00E00/thumbs/{{ img_url }}.jpg"
+             alt="{{ description }}"
+             title="{{ description }}"
+             class="img-small"/>
+    </a>
+{%- endmacro -%}
+
+{% block content %}
+
+    <div class="card">
+        <h1 class="heading"> Season {{ season }} Episode {{ episode }} </h1>
+        <div class="content">
+            <p>
+                This was the pilot episode, hosted at Skimlinks' office just
+                north of Old St. Being the first session nobody quite knew
+                what to expect. As people turned up, we chatted about what
+                we'd like to get out of the evening.
+            </p>
+            {{ gallery_image("0 Arrival", "People milling about") }}
+            <p>
+                As advertised, this was an un-catered event attendees
+                were welcome to bring or order their own food and
+                beverages. A few people had eaten before they arrived while
+                others ordered the traditional tech meet-up staple: pizza.
+            </p>
+            {{ gallery_image("1 Order", "The inevitable pizza order") }}
+            <p>
+                After a bit of discussion we wrote up some of our ideas on a
+                whiteboard - this was intended to help people coalesce into
+                groups.
+            </p>
+            {{ gallery_image("2 Ideas", "Ideas are collected") }}
+            <p>
+                When the pizza arrived people continued to chat about their
+                projects - Greg told Tim about how he'd been trying to
+                contribute to the turtle module, not knowing that Tim is a
+                Python core contributor. This lead to Tim and Greg spending
+                their evening working on a related ticket.
+            </p>
+            {{ gallery_image("3 Serendipity", "A chance conversation over pizza leads to collaboration") }}
+            <p>
+                Given a face-to-face environment to collaborate on our
+                projects, some of us went old-school, scrawling on notes on
+                primitive sheets of dead tree - while much of open source
+                goes on on-line, there are still merits in getting together
+                to meet with your collaborators.
+            </p>
+            {{ gallery_image("4 Problem Framing", "Sketching out a project") }}
+            <p>
+                While some people formed into small groups to work together,
+                others chose to find temporary solitude in which to
+                concentrate. Giving the space to work apart helped to make
+                the interactions that did go on easier and more organic.
+            </p>
+
+            {{ gallery_image("5 To Work", "Various projects at adjacent tables") }}
+            {{ gallery_image("6 Quiet Space", "Tim finds a quite room to work to music") }}
+            {{ gallery_image("7 Quiet Space", "Sandy and Al find a corner to work in") }}
+
+            <p>
+                At the end of the evening everyone discussed what they had
+                done, some of the discussion was not only interesting, but
+                also informative - people who had not been working on a
+                project were able to contribute towards its ongoing direction
+                by offering criticism and support for proposed implementations.
+            </p>
+            {{ gallery_image("8 Discussion", "At the end of the evening people discuss their progress") }}
+            <p>
+                The following links is some of the output from the evening:
+            </p>
+            <ul>
+                <li>
+                    <a href="https://bugs.python.org/issue21916" >Tests for
+                        the turtle module</a>
+                </li>
+                <li>
+                    <a href="https://learnpython.wordpress
+                    .com/2015/05/21/notes-on-teaching-python-mental-models/">
+                        Naomi's blog post on teaching python
+                    </a>
+                </li>
+                <li>
+                    Éléonore worked towards a talk on NLP
+                </li>
+                <li>
+                    Al and Sandy put together and started <a href="https://github.com/london-python-project-nights/romaine/issues"> a backlog for
+                    Romaine</a>
+                </li>
+                <li>
+                    Dan and Matt put together OSX installation notes for
+                    <a href="http://mauveweb.co.uk/posts/2015/05/pygame-zero.html">Pygame Zero</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+{% endblock %}
