@@ -1,0 +1,66 @@
+{% extends "html/base.html" %}
+
+{%- macro gallery_image(img_url, description) -%}
+    <a href="/assets/jpg/S00E01/{{ img_url }}.jpg">
+        <img src="/assets/jpg/S00E01/thumbs/{{ img_url }}.jpg"
+             alt="{{ description }}"
+             title="{{ description }}"
+             class="img-small"/>
+    </a>
+{%- endmacro -%}
+
+{% block content %}
+
+    <div class="card">
+        <h1 class="heading"> Season {{ season }} Episode {{ episode }} </h1>
+        <div class="content">
+            <p>
+                This was the second episode, again kindly hosted at Skimlinks'.
+                As with last time we started by making sure everyone had fed,
+                and by discussing our interests, and potential projects.
+            </p>
+            {{ gallery_image("0 Preamble", "People talking and eating") }}
+            <p>
+                This second session was slightly more focused with fewer
+                projects on the board, which led to a more contiguous event.
+                With fewer projects being worked on, more people worked together.
+            </p>
+            {{ gallery_image("1 Smaller", "Group gathered with less populous board") }}
+            <p>
+                With more people working together this gave an opportunity to
+                pair program, a practice some were more familiar with than
+                others, and it encouraged more communication within the session.
+            </p>
+            {{ gallery_image("2 Groups", "Smaller group, more collaborative") }}
+            <p>
+                All in all this lead to more getting done, and a deeper level of
+                discussion at the end of the event. While I wouldn't want to
+                avoid having the group grow larger, I shall be working over the
+                next few sessions to capture this environment again, and
+                ruminate on way to scale it.
+            </p>
+            <p>
+                The following links are some of the output from the evening:
+            </p>
+            <ul>
+                <li>
+                    Al and Matt worked on
+                    <a href="https://github.com/london-python-project-nights/romaine/pull/10">
+                        Step finding
+                    </a> for Romaine
+                </li>
+                <li>
+                    Sandy and Walter worked on
+                    <a href="https://github.com/london-python-project-nights/romaine/pull/13">
+                        feature location </a> for Romaine
+                </li>
+                <li>
+                    Dan and Tim worked on
+                    <a href="https://bitbucket.org/lordmauve/pgzero/commits/all">
+                        several changes including work on audio </a> in Pygame Zero
+                </li>
+            </ul>
+
+        </div>
+    </div>
+{% endblock %}

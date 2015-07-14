@@ -18,10 +18,10 @@ def write(template_path, output_path, **context):
 
 def get_events(events_root):
 
-    for season in os.listdir(events_root):
+    for season in sorted(os.listdir(events_root)):
         if not os.path.isdir(os.path.join(events_root, season)):
             continue
-        for filename in os.listdir(os.path.join(events_root, season)):
+        for filename in sorted(os.listdir(os.path.join(events_root, season))):
             if not os.path.isfile(os.path.join(events_root, season, filename)):
                 continue
             episode, ext = os.path.splitext(filename)
@@ -48,7 +48,7 @@ def main():
         events.append(event)
         write(**event)
 
-    write('html/events.html', 'events/index.html', events=events)
+    write('html/events.html', 'events/index.html', events=events[::-1])
 
 if __name__ == "__main__":
     main()
