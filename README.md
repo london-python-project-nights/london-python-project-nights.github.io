@@ -1,3 +1,7 @@
+This project has been disabled as it is no longer maintained and has insecure dependencies.
+It has been left online in case of any future interest.
+To re-enable it, dependencies in requirements.txt and setup.py should be uncommented.
+
 # london-python-project-nights.github.io
 
 This is the home page of London Python Project Nights. 
